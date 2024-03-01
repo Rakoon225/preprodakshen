@@ -1,0 +1,42 @@
+@use '@/assets/styles/utils' as v;
+* {
+  transition: 0.2s;
+}
+
+:target {
+  scroll-margin-top: v.em(100); /* размер отступа */
+}
+
+
+//<<<<<
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: v.$white;
+  font-family: 'Manrope';
+  min-height: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 auto;
+}
+//>>>>>> прижал футер
+
+.container {
+  margin: 0 auto;
+  padding: v.em(0) v.em(15);
+
+  @media (min-width: v.em(768)) {
+    max-width: v.rem(1230);
+  }
+}
